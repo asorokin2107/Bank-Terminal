@@ -5,6 +5,22 @@ import java.util.Scanner;
 
 public class Main {
 
+    public static void phone() {
+        System.out.println("Введите ваш номер телефона: ");
+        long phoneNumber = new Scanner(System.in).nextLong();
+        System.out.println("Введенное значние: " + phoneNumber);
+        System.out.println("В ближайшее время с вами свяжется наш консультант!");
+        System.out.println("Будем рады видеть Вас снова!");
+    }
+
+    public static void ticket() {
+        SecureRandom random = new SecureRandom();
+        char randomizeCharacter = (char) (random.nextInt(26) + 'A');
+        System.out.println("Номер вашего талона " + randomizeCharacter + "-" + random.nextInt(500));
+        System.out.println("Дождитесь появление вашего номера на мониторе");
+        System.out.println("Будем рады видеть Вас снова!");
+    }
+
     public static void errors() {
         System.out.println("Ошибка! Выберите верный пункт!");
         System.out.println("Повторно запустите терминал, чтобы продолжить.");
@@ -33,12 +49,7 @@ public class Main {
 
                 int choiceTwo = scanner.nextInt();
                 if (choiceTwo == 1 || choiceTwo == 2 || choiceTwo == 3) {
-
-                    SecureRandom random = new SecureRandom();
-                    char randomizeCharacter = (char) (random.nextInt(26) + 'A');
-                    System.out.println("Номер вашего талона " + randomizeCharacter + "-" + random.nextInt(500));
-                    System.out.println("Дождитесь появление вашего номера на мониторе");
-                    System.out.println("Будем рады видеть Вас снова!");
+                    ticket();
                     break;
                 } else {
                     errors();
@@ -53,19 +64,11 @@ public class Main {
                 System.out.println("3.Досрочное погашение кредита.");
                 int choiceThree = scanner.nextInt();
                 if (choiceThree == 1) {
-                    System.out.println("Введите ваш номер телефона: ");
-                    long phoneNumber = new Scanner(System.in).nextLong();
-                    System.out.println("Введенное значние: " + phoneNumber);
-                    System.out.println("В ближайшее время с вами свяжется наш консультант!");
-                    System.out.println("Будем рады видеть Вас снова!");
+                    phone();
                     break;
                 }
                 if (choiceThree == 2 || choiceThree == 3) {
-                    SecureRandom random = new SecureRandom();
-                    char randomizeCharacter = (char) (random.nextInt(26) + 'A');
-                    System.out.println("Номер вашего талона " + randomizeCharacter + "-" + random.nextInt(500));
-                    System.out.println("Дождитесь появление вашего номера на мониторе");
-                    System.out.println("Будем рады видеть Вас снова!");
+                    ticket();
                     break;
                 } else {
                     errors();
@@ -87,11 +90,7 @@ public class Main {
                     break;
                 }
                 if (choiceFour == 2) {
-                    SecureRandom random = new SecureRandom();
-                    char randomizeCharacter = (char) (random.nextInt(26) + 'A');
-                    System.out.println("Номер вашего талона " + randomizeCharacter + "-" + random.nextInt(500));
-                    System.out.println("Дождитесь появление вашего номера на мониторе");
-                    System.out.println("Будем рады видеть Вас снова!");
+                    ticket();
                     break;
                 } else {
                     errors();
@@ -106,19 +105,11 @@ public class Main {
                 System.out.println("3.Получение пенсии.");
                 int choiceFive = scanner.nextInt();
                 if (choiceFive == 1 || choiceFive == 3) {
-                    SecureRandom random = new SecureRandom();
-                    char randomizeCharacter = (char) (random.nextInt(26) + 'A');
-                    System.out.println("Номер вашего талона " + randomizeCharacter + "-" + random.nextInt(500));
-                    System.out.println("Дождитесь появление вашего номера на мониторе");
-                    System.out.println("Будем рады видеть Вас снова!");
+                    ticket();
                     break;
                 }
                 if (choiceFive == 2) {
-                    System.out.println("Введите ваш номер телефона: ");
-                    long phoneNumber = new Scanner(System.in).nextLong();
-                    System.out.println("Введенное значние: " + phoneNumber);
-                    System.out.println("В ближайшее время с вами свяжется наш консультант!");
-                    System.out.println("Будем рады видеть Вас снова!");
+                    phone();
                     break;
                 } else {
                     errors();
